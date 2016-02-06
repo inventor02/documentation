@@ -14,16 +14,12 @@
     <body>
 
         <header class="navbar navbar-default navbar-fixed-top">
-
             <a class="navbar-brand" href="/">
                 Codeanywhere
                 <small class="hidden-xs hidden-sm">
                     Documentation
                 </small>
             </a>
-
-            
-
         </header>
 
         <main class="container-fluid">
@@ -274,15 +270,15 @@
                                   </a>
                                </li>
                                               </ul>
-                                                 &nbsp;
-                              &nbsp;
+                                    &nbsp;
+                 &nbsp;
 
 
                </nav>
                         </div>
           <div>
-                <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1 id="google-drive">Google Drive</h1>
+            <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
+              <h1 id="google-drive">Google Drive</h1>
 <p>With Codeanywhere, you can connect your Google Drive account!</p>
 <h3 id="adding-a-new-connection-to-google-drive">Adding a New Connection to Google Drive</h3>
 <p>Go to File -&gt; New Connections -&gt; Google Drive.</p>
@@ -296,19 +292,18 @@ Now you can easily edit files from your Google Drive account!</p>
 <h3 id="invalid-token-issue">Invalid Token issue</h3>
 <p>If you receive an Invalid Token error, it means there is something wrong with your long-term access token, so please try removing and adding your Drive account. If that does not work please try revoking access to Codeanywhere from your Google security page located at: <a href="https://www.google.com/settings/security"><a href="https://www.google.com/settings/security">https://www.google.com/settings/security</a></a> - under Connected apps and sites, Remove Codeanywhere, and afterwards add it again.</p>
 <img src="images/google-invalidtoken.png" width="500" height="auto">
-                </section>
-
-                                          </br>
- <footer>
-                       <a href="https://github.com/codeanywhere/documentation/blob/master/connections/googledrive.md">
-                    Improve this Documentation
-                </a>
+            </section>
+          </br>
+            <footer>
+                         <a href="https://github.com/codeanywhere/documentation/blob/master/connections/googledrive.md">
+                Improve this Documentation
+             </a>
                
                        
-        </footer>
+            </footer>
         </main>
 
-</br>
+        </br>
        
         </div>
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -318,11 +313,26 @@ Now you can easily edit files from your Google Drive account!</p>
         <script>
             $(function() {
                 // Syntax highlighting
-                hljs.initHighlightingOnLoad();
-                
-                
+                hljs.initHighlightingOnLoad();        
             });
             
+
+        </script>
+        <script>
+          (function(i, s, o, g, r, a, m) {
+           i['GoogleAnalyticsObject'] = r;
+           i[r] = i[r] || function() {
+             (i[r].q = i[r].q || []).push(arguments)
+           }, i[r].l = 1 * new Date();
+           a = s.createElement(o),
+             m = s.getElementsByTagName(o)[0];
+           a.async = 1;
+           a.src = g;
+           m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+         ga('create', 'UA-4540843-15', 'auto');
+         ga('send', 'pageview');
 
         </script>
         
