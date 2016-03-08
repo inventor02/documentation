@@ -100,6 +100,11 @@
                                   </a>
                                </li>
                                                         <li class="">
+                                  <a href="/connections/containerconfig.html">
+                                      <span class='subnav-indent'><i class='fa fa-caret-right'></i> Setting up your Container </span>
+                                  </a>
+                               </li>
+                                                        <li class="">
                                   <a href="/connections/github.html">
                                       GitHub
                                   </a>
@@ -226,6 +231,26 @@
                                </li>
                                               </ul>
                                         <p class="menu-section">
+                         Advanced Topics
+                     </p>
+                     <ul class="nav nav-pills nav-stacked">
+                                                        <li class="">
+                                  <a href="/advancedtopics/svn.html">
+                                      Subversion
+                                  </a>
+                               </li>
+                                                        <li class="">
+                                  <a href="/advancedtopics/sass.html">
+                                      Installing SASS
+                                  </a>
+                               </li>
+                                                        <li class="">
+                                  <a href="/advancedtopics/gitcommands.html">
+                                      Working with repositories
+                                  </a>
+                               </li>
+                                              </ul>
+                                        <p class="menu-section">
                          Account Management
                      </p>
                      <ul class="nav nav-pills nav-stacked">
@@ -302,7 +327,8 @@
 <li>CakePHP – PHP Development Stack with Apache (running on standard HTTP port – 80), CakePHP, PHP, MySQL (user: myapp, password: secret), and Composer preinstalled</li>
 <li>Drupal – PHP Development Stack with Apache (running on standard HTTP port – 80), Drupal, PHP, MySQL (myapp user secret password), phpMyAdmin and Composer preinstalled</li>
 <li>LoopBack – NodeJS Development Stack with LoopBack, NodeJS, MySQL, NPM, bower and grunt preinstalled</li>
-<li>Swift – Swift Development Stack </li>
+<li>Swift – Swift Development Stack</li>
+<li>Java – Java Development Stack with OpenJDK7, OpenJDE7 and Tomcat7 preinstalled</li>
 </ul>
 <p>You won't even be aware of it being created or started. You can choose between two operating systems: Ubuntu 14.04 and CentOS 6.5.</p>
 <p><img src="images/container-create.png" alt="container-create" title="container-create" /></p>
@@ -322,13 +348,6 @@ With containers, you can view your code with your preview link. You can check yo
 <p>By selecting Run, your preview link will be opened and any command neccessary to run your app, opened in SSH terminal.</p>
 <p>Create any file, by entering filename.extension, or folder inside your container, Upload files directly from your local storage or Share your entire Container!</p>
 <p>In case you want to delete your entire Container, just click Destroy. However, keep in mind that your work will be removed and you wont be able to retrieve it afterwards!</p>
-<h3 id="phpmyadmin">PHPMyAdmin</h3>
-<p>PhpMyAdmin comes preinstalled with our Containers (both CentOS and Ubuntu). To access it first open the info by right-clicking the Container in File Explorer:</p>
-<p><img src="images/container-info.png" alt="phpinfo" title="container-info" /></p>
-<p>At the top of your Info page, you can see your Username and Password. Copy the link into the new tab of your browser and add „/phpmyadmin“ at the end of the link to access phpMyAdmin – it will look something like: <a href="http://preview.xxxxxx.box.codeanywhere.com/phpmyadmin">http://preview.xxxxxx.box.codeanywhere.com/phpmyadmin</a> or, in this example, <a href="http://port-80.xxxxxx.box.codeanywhere.com/phpmyadmin">http://port-80.xxxxxx.box.codeanywhere.com/phpmyadmin</a>. For login use the &quot;root&quot; as Username, and leave the Password field empty:</p>
-<p><img src="images/phpmyadmin.png" alt="phppmyadmin" title="phppmyadmin" /></p>
-<p>Username and password will vary depending on the Stack you choose!</p>
-<p>If you want to be able to access your Container at all times, you can activate our feature Always-on, which will keep your Container running even when you're not using Codeanywhere!</p>
 <h3 id="creating-a-custom-stack">Creating a Custom Stack</h3>
 <p>In order to create a Custom Stack of one of your Stacks, first, you'll have to right click on your Container and select Create Custom Stacks</p>
 <img src="images/ccs1.png" width="200" height="auto">
