@@ -48,7 +48,6 @@ h3 {
 
 li {
     margin-bottom: 0px;
-    font-size: 12px;
 }
 
 
@@ -118,7 +117,7 @@ pre code {
 
 
 li {
-padding-bottom: 10px;
+padding-bottom: 1px;
 }
 
 li:before {
