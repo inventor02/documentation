@@ -259,7 +259,7 @@
                                       Installing SASS
                                   </a>
                                </li>
-                                                        <li class="active">
+                                                        <li class="">
                                   <a href="/advancedtopics/gitcommands.html">
                                       Working with repositories
                                   </a>
@@ -323,68 +323,13 @@
                         </div>
           <div>
             <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-              <h1 id="working-with-repositories">Working with Repositories</h1>
-<p>With Codeanywhere, you’ll be able to work directly with your repositories. You can work with your resository using standard git commands inside your SSH terminal. Right click on your <a href="http://docs.codeanywhere.com/connections/container.html">Container</a> and select SSH Terminal in order to open it up.</p>
-<h2 id="setting-up-a-repository">Setting up a Repository</h2>
-<p>Create a new local repository:</p>
-<pre><code class="language-sh">git init</code></pre>
-<p>Create a new repository out of a directory:</p>
-<pre><code class="language-sh">git init &lt;directory&gt; </code></pre>
-<p>Create a copy of an existing repository inside Container:</p>
-<pre><code class="language-sh">git clone /path/repository_name.git </code></pre>
-<p>Create a copy of an existing repository inside Container into an directory:</p>
-<pre><code class="language-sh">git clone /path/repository_name.git &lt;directory&gt;  </code></pre>
-<p>Create a copy of an private repository inside Container:</p>
-<pre><code class="language-sh">git clone username@host:/path/repository_name.git </code></pre>
-<h2 id="saving-changes">Saving changes</h2>
-<p>Stage all changes in a file for next commit:</p>
-<pre><code class="language-sh">git add &lt;filename&gt; </code></pre>
-<p>Stage all changes in a folder for next commit:</p>
-<pre><code class="language-sh">git add &lt;foldername&gt; </code></pre>
-<p>Add all files to staging:</p>
-<pre><code class="language-sh">git add * </code></pre>
-<p>Commit changes to head:</p>
-<pre><code class="language-sh">git commit -m "Commit message" </code></pre>
-<p>Commit all changes in the working directory:</p>
-<pre><code class="language-sh">git commit -a </code></pre>
-<h2 id="inspecting-a-repository">Inspecting a Repository</h2>
-<p>List which files are staged, unstaged, and untracked:</p>
-<pre><code class="language-sh">git status </code></pre>
-<p>Display the entire commit history using the default formatting:</p>
-<pre><code class="language-sh">git log </code></pre>
-<h2 id="connecting-to-a-remote-repository">Connecting to a remote Repository</h2>
-<p>Add the server to be able to push to it:</p>
-<pre><code class="language-sh">git remote add origin &lt;server&gt; </code></pre>
-<p>List all currently configured remote repositories:</p>
-<pre><code class="language-sh">git remote -v </code></pre>
-<h2 id="working-with-branches">Working with branches</h2>
-<p>Create a new branch and switch to it:</p>
-<pre><code class="language-sh">git checkout -b &lt;branchname&gt;</code></pre>
-<p>Switch from one branch to another:</p>
-<pre><code class="language-sh">git checkout &lt;branchname&gt; </code></pre>
-<p>List all the branches in your repo, and also tell you what branch you're currently in:</p>
-<pre><code class="language-sh">git branch </code></pre>
-<p>Delete the feature branch:</p>
-<pre><code class="language-sh">git branch -d &lt;branchname&gt; </code></pre>
-<p>Push the branch to your remote repository, so others can use it:</p>
-<pre><code class="language-sh">git push origin &lt;branchname&gt; </code></pre>
-<p>Push all branches to your remote repository:</p>
-<pre><code class="language-sh">git push --all origin </code></pre>
-<p>Delete a branch on your remote repository:</p>
-<pre><code class="language-sh">git push origin :&lt;branchname&gt; </code></pre>
-<p>For example, if you want to push to your master branch, just use:</p>
-<pre><code class="language-sh">git push origin master </code></pre>
-<h2 id="update-to-a-remote-repository">Update to a remote repository</h2>
-<p>Merge changes on the remote server to your Container:</p>
-<pre><code class="language-sh">git pull </code></pre>
-<p>Merge a different branch into your active branch:</p>
-<pre><code class="language-sh">git merge &lt;branchname&gt; </code></pre>
-<p>View all the merge conflicts</p>
-<pre><code class="language-sh">git diff </code></pre>
+              <form action="search.html">
+<input type="text" name="q" id="tipue_search_input" autocomplete="off" required></form>
+<div id="tipue_search_content"></div>
             </section>
           </br>
             <footer>
-                         <a href="https://github.com/codeanywhere/documentation/blob/master/advancedtopics/gitcommands.md">
+                         <a href="https://github.com/codeanywhere/documentation/blob/master/search.md">
                 Improve this Documentation
              </a>
                

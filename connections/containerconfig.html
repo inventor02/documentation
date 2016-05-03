@@ -75,6 +75,11 @@
                                   </a>
                                </li>
                                                         <li class="">
+                                  <a href="/overview/codeanywhereui/terminal.html">
+                                      <span class='subnav-indent'><i class='fa fa-caret-right'></i> Terminal</span>
+                                  </a>
+                               </li>
+                                                        <li class="">
                                   <a href="/overview/codeanywhereui/statusbar.html">
                                       <span class='subnav-indent'><i class='fa fa-caret-right'></i> Status Bar</span>
                                   </a>
@@ -259,6 +264,11 @@
                                       Working with repositories
                                   </a>
                                </li>
+                                                        <li class="">
+                                  <a href="/advancedtopics/htaccess.html">
+                                      Changing document root in container
+                                  </a>
+                               </li>
                                               </ul>
                                         <p class="menu-section">
                          Account Management
@@ -323,8 +333,10 @@
 <p>In Config, you can set up commands necessary for your Stack to Run. </p>
 <p>Let's say, you have an app inside your workspace folder /path/to/folder/.
 By default current working dir is set to be /workspace/. By changing &quot;cwd&quot;: &quot;~/workspace&quot; to &quot;cwd&quot;: &quot;~/workspace/path/to/folder&quot;, you can set the file path which will be used upon Runing your app.</p>
-<p>Inside &quot;commands&quot; you can set any commands necesary for running your container. </p>
+<p>cwd (curent working directory) is the location in which your run commands should be located. The default location is ~/workspace, if your commands are located in a subdirectory named &quot;test” then cwd should be ~/workspace/test.</p>
 <img src="images/container-config-cwd.png" width="300" height="auto">
+<p>NOTE: containers hosting content via Apache (example: html, php) expect that content to be located at ~/workspace, if you keep your content in another directory you should edit or create the ~/workspace/.htaccess file to point at that directory.</p>
+<p>Inside &quot;commands&quot; you can set any commands necesary for running your container.</p>
 <p>In &quot;commands&quot;: [], set command neccessary for running your app, such as: &quot;grunt&quot;, &quot;ember server&quot;, &quot;rails server&quot; ect, depending on your app.</p>
 <img src="images/container-config-commands.png" width="300" height="auto">
 <p>If you changed port in your app, to listen to the port defined in your Config file, under &quot;environment&quot;, feel free to set new port number which will use your app.</p>

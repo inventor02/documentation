@@ -74,7 +74,7 @@
                                       <span class='subnav-indent'><i class='fa fa-caret-right'></i> The Code Editor</span>
                                   </a>
                                </li>
-                                                        <li class="">
+                                                        <li class="active">
                                   <a href="/overview/codeanywhereui/terminal.html">
                                       <span class='subnav-indent'><i class='fa fa-caret-right'></i> Terminal</span>
                                   </a>
@@ -259,7 +259,7 @@
                                       Installing SASS
                                   </a>
                                </li>
-                                                        <li class="active">
+                                                        <li class="">
                                   <a href="/advancedtopics/gitcommands.html">
                                       Working with repositories
                                   </a>
@@ -323,68 +323,68 @@
                         </div>
           <div>
             <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-              <h1 id="working-with-repositories">Working with Repositories</h1>
-<p>With Codeanywhere, you’ll be able to work directly with your repositories. You can work with your resository using standard git commands inside your SSH terminal. Right click on your <a href="http://docs.codeanywhere.com/connections/container.html">Container</a> and select SSH Terminal in order to open it up.</p>
-<h2 id="setting-up-a-repository">Setting up a Repository</h2>
-<p>Create a new local repository:</p>
-<pre><code class="language-sh">git init</code></pre>
-<p>Create a new repository out of a directory:</p>
-<pre><code class="language-sh">git init &lt;directory&gt; </code></pre>
-<p>Create a copy of an existing repository inside Container:</p>
-<pre><code class="language-sh">git clone /path/repository_name.git </code></pre>
-<p>Create a copy of an existing repository inside Container into an directory:</p>
-<pre><code class="language-sh">git clone /path/repository_name.git &lt;directory&gt;  </code></pre>
-<p>Create a copy of an private repository inside Container:</p>
-<pre><code class="language-sh">git clone username@host:/path/repository_name.git </code></pre>
-<h2 id="saving-changes">Saving changes</h2>
-<p>Stage all changes in a file for next commit:</p>
-<pre><code class="language-sh">git add &lt;filename&gt; </code></pre>
-<p>Stage all changes in a folder for next commit:</p>
-<pre><code class="language-sh">git add &lt;foldername&gt; </code></pre>
-<p>Add all files to staging:</p>
-<pre><code class="language-sh">git add * </code></pre>
-<p>Commit changes to head:</p>
-<pre><code class="language-sh">git commit -m "Commit message" </code></pre>
-<p>Commit all changes in the working directory:</p>
-<pre><code class="language-sh">git commit -a </code></pre>
-<h2 id="inspecting-a-repository">Inspecting a Repository</h2>
-<p>List which files are staged, unstaged, and untracked:</p>
-<pre><code class="language-sh">git status </code></pre>
-<p>Display the entire commit history using the default formatting:</p>
-<pre><code class="language-sh">git log </code></pre>
-<h2 id="connecting-to-a-remote-repository">Connecting to a remote Repository</h2>
-<p>Add the server to be able to push to it:</p>
-<pre><code class="language-sh">git remote add origin &lt;server&gt; </code></pre>
-<p>List all currently configured remote repositories:</p>
-<pre><code class="language-sh">git remote -v </code></pre>
-<h2 id="working-with-branches">Working with branches</h2>
-<p>Create a new branch and switch to it:</p>
-<pre><code class="language-sh">git checkout -b &lt;branchname&gt;</code></pre>
-<p>Switch from one branch to another:</p>
-<pre><code class="language-sh">git checkout &lt;branchname&gt; </code></pre>
-<p>List all the branches in your repo, and also tell you what branch you're currently in:</p>
-<pre><code class="language-sh">git branch </code></pre>
-<p>Delete the feature branch:</p>
-<pre><code class="language-sh">git branch -d &lt;branchname&gt; </code></pre>
-<p>Push the branch to your remote repository, so others can use it:</p>
-<pre><code class="language-sh">git push origin &lt;branchname&gt; </code></pre>
-<p>Push all branches to your remote repository:</p>
-<pre><code class="language-sh">git push --all origin </code></pre>
-<p>Delete a branch on your remote repository:</p>
-<pre><code class="language-sh">git push origin :&lt;branchname&gt; </code></pre>
-<p>For example, if you want to push to your master branch, just use:</p>
-<pre><code class="language-sh">git push origin master </code></pre>
-<h2 id="update-to-a-remote-repository">Update to a remote repository</h2>
-<p>Merge changes on the remote server to your Container:</p>
-<pre><code class="language-sh">git pull </code></pre>
-<p>Merge a different branch into your active branch:</p>
-<pre><code class="language-sh">git merge &lt;branchname&gt; </code></pre>
-<p>View all the merge conflicts</p>
-<pre><code class="language-sh">git diff </code></pre>
+              <h3 id="terminal">Terminal</h3>
+<p>With Codeanywhere you get your own Terminal/Command Prompt in the cloud. This allows you to SSH directly from your browser to a different server or compile your code all without leaving your browser. Terminal can be used to run any command on your Container or remote servers. Simply right click on your connection with SSH access and select SSH terminal. </p>
+<img src="images/sshterminal.png" width="250" height="auto">
+<p>Also, with our entirely new feature, you can collaborate directly in your terminal. Select that connection and press share in top menu bar afterwards. </p>
+<p><img src="images/shareicon.png" alt="shareicon" title="shareicon" /></p>
+<p>Please keep in mind that your SSH should be open. Your collaborator will receive a notification in top right corner that says: &quot;user@mail.com has requested SSH terminal session collaboration on connection name_of_connection with you&quot;.</p>
+<p>Use direct port access to get to Codeanywhere’s Containers via any SSH terminal or SFTP client. </p>
+<h3 id="how-to-connect-local-machine-to-a-container-via-putty">How to connect local machine to a Container via Putty?</h3>
+<p>Here are the complete instructions for connecting to your container with Putty:</p>
+<p>To generate a set of RSA keys with PuTTYgen: </p>
+<ol>
+<li>Start the PuTTYgen utility, by double-clicking on its .exe file</li>
+<li>For Type of key to generate, select SSH-2 RSA</li>
+<li>In the Number of bits in a generated key field, specify either 2048 or 4096 (increasing the bits makes it harder to crack the key by brute-force methods)</li>
+<li>Click the Generate button </li>
+<li>Move your mouse pointer around in the blank area of the Key section, below the progress bar (to generate some randomness) until the progress bar is full</li>
+<li>A private/ public key pair has now been generated</li>
+<li>In the Key comment field, enter any comment you'd like, to help you identify this key pair, later (e.g. your e-mail address; home; office; etc.) -- the key comment is particularly useful in the event you end up creating more than one key pair</li>
+<li>Click the Save public key button &amp; choose whatever filename you'd like (some users create a folder in their computer named my_keys)</li>
+<li>Click the Save private key button &amp; choose whatever filename you'd like (you can save it in the same location as the public key, but it should be a location that only you can access and that you will NOT lose! If you lose your keys and have disabled username/password logins, you will no longer be able log in!)</li>
+<li>Right-click in the text field labeled Public key for pasting into OpenSSH authorized_keys file and choose Select All</li>
+<li>Right-click again in the same text field and choose Copy.</li>
+</ol>
+<p>Container config: </p>
+<ol>
+<li>Log on to your container </li>
+<li>Run: vim ~/.ssh/authorized_keys </li>
+<li>Paste key in new line </li>
+<li>Save and exit</li>
+</ol>
+<p>Putty config: </p>
+<ol>
+<li>Start PuTTY by double-clicking its executable file; </li>
+<li>PuTTY's initial window is the Session Category (navigate PuTTY's various categories, along the left-hand side of the window); </li>
+<li>In the Host Name field, enter the Container’s DNS (preview.xxxxx.box.codeanywhere.com) </li>
+<li>Enter the port number in the Port field (see Container info) </li>
+<li>Select SSH under Protocol; </li>
+<li>Along the left-hand side of the window, select the Data sub-category, under Connection; </li>
+<li>Specify the username cabox in the Auto-login username field; </li>
+<li>Expand the SSH sub-category, under Connection; </li>
+<li>Highlight the Auth sub-category and click the Browse button, on the right-hand side of the PuTTY window; </li>
+<li>Browse your file system and select your previously-created private key; </li>
+<li>Return to the Session Category and enter a name for this profile in the Saved Sessions field </li>
+<li>Click the Save button for the Load, Save or Delete a stored session area.</li>
+<li>Click on the desired connection and then “connect”</li>
+</ol>
+<h3 id="how-can-i-connect-to-the-ssh-of-my-container-linux-and-osx">How can I connect to the SSH of my Container (Linux and OSX)?</h3>
+<ol>
+<li>open your Terminal</li>
+<li>type in ssh-keygen and you will create your public key</li>
+<li>go to .ssh/id_rsa.pub and copy your entire key</li>
+<li>In Codeanywhere, in Container's SSH, use command: cat .ssh/id_rsa.pub</li>
+<li>use command vim authorized_keys</li>
+<li>(type &quot;A&quot; or &quot;I&quot;) paste your key in new line and Save (by pressing ESC, and entering :wq)</li>
+<li>Locate SSH port number in Container's Info</li>
+</ol>
+<p>Now in order to connect to your box, you have to use the following command to create a tunnel from your local machine to your Container:</p>
+<pre><code class="language-sh">ssh -P port cabox@preview.xxx.box.codeanywhere.com -i id_rsa.pub</code></pre>
             </section>
           </br>
             <footer>
-                         <a href="https://github.com/codeanywhere/documentation/blob/master/advancedtopics/gitcommands.md">
+                         <a href="https://github.com/codeanywhere/documentation/blob/master/overview/codeanywhereui/terminal.md">
                 Improve this Documentation
              </a>
                
