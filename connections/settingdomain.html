@@ -119,7 +119,7 @@
                                       <span class='subnav-indent'><i class='fa fa-caret-right'></i> PHPMyAdmin </span>
                                   </a>
                                </li>
-                                                        <li class="">
+                                                        <li class="active">
                                   <a href="/connections/settingdomain.html">
                                       <span class='subnav-indent'><i class='fa fa-caret-right'></i> Setting Custom Domain </span>
                                   </a>
@@ -269,7 +269,7 @@
                                       Subversion
                                   </a>
                                </li>
-                                                        <li class="active">
+                                                        <li class="">
                                   <a href="/advancedtopics/sass.html">
                                       Installing SASS
                                   </a>
@@ -333,23 +333,21 @@
                         </div>
           <div>
             <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-              <h1 id="installing-sass">Installing SASS</h1>
-<p>Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax. </p>
-<p>Our <a href="http://docs.codeanywhere.com/connections/container.html">Containers</a> don't have SASS preinstalled, but you can set it up easily!</p>
-<p>First of all, you'll have to create an Container. Of course, you can use any Stack but you'll have to install Ruby first.
-In order to install Ruby, use:</p>
-<pre><code class="language-sh">sudo apt-get install ruby-full</code></pre>
-<p>on Ubuntu, or:</p>
-<pre><code class="language-sh">sudo yum install ruby </code></pre>
-<p>on CentOS. </p>
-<p>Now, you just have to install the Sass gem with the following command:</p>
-<pre><code class="language-sh">sudo gem install sass</code></pre>
-<p>You can use command line to run Sass, just use</p>
-<pre><code class="language-sh">sass input.scss output.css</code></pre>
+              <h1 id="setting-custom-domain">Setting Custom Domain</h1>
+<p>Once you've created a container, you will probably want to preview it in your own link! Now, you can set your custom domain using our <a href="https://codeanywhere.com/dashboard#">Dashboard</a>!</p>
+<p><img src="images/customdomain1.png" alt="customdomain1" title="customdomain1" /></p>
+<p>In your dashboard, select &quot;Add New Domain Name&quot;.</p>
+<p>Add your Custom Domain:</p>
+<p><img src="images/customdomain1-1.png" alt="customdomain1-1" title="customdomain1-1" /></p>
+<p>Add Internal port to 80. In case you have an app running on a specific port, you can set that as well. For example, if you set your Internal port to 8000, you can access your custom domain without appending :8000 at the URL.</p>
+<p>If you set the External port to 443, Codeanywhere will automatically set up a free SSL certificate provided by Let's Encrypt!</p>
+<p><img src="images/customdomain2.png" alt="customdomain2" title="customdomain2" /></p>
+<p>Click on Create and that's it! Now you can access your Container from your domain!
+Custom domains do not prevent container to be turned off in case it does not have AlwaysOn feature enabled. This feature is available on Freelancer plan or higher.</p>
             </section>
           </br>
             <footer>
-                         <a href="https://github.com/codeanywhere/documentation/blob/master/advancedtopics/sass.md">
+                         <a href="https://github.com/codeanywhere/documentation/blob/master/connections/settingdomain.md">
                 Improve this Documentation
              </a>
                
