@@ -176,37 +176,32 @@
                                </li>
                                               </ul>
                                         <p class="menu-section">
-                         Codeanywhere Settings
+                         Preferences
                      </p>
                      <ul class="nav nav-pills nav-stacked">
-                                                        <li class="active">
-                                  <a href="/preferences/general.html">
-                                      General Preferences
+                                                        <li class="">
+                                  <a href="/preferences/preferences_structure.html">
+                                      Preferences Structure
                                   </a>
                                </li>
-                                                        <li class="">
-                                  <a href="/preferences/supportedlanguagesandthemes.html">
-                                      Supported Languages and Themes
+                                                        <li class="active">
+                                  <a href="/preferences/general.html">
+                                      General
                                   </a>
                                </li>
                                                         <li class="">
                                   <a href="/preferences/commandsandkeybindings.html">
-                                      Commands and Key Bindings
+                                      Key Bindings
                                   </a>
                                </li>
                                                         <li class="">
-                                  <a href="/preferences/search.html">
-                                      Searching and Replacing in Files
-                                  </a>
-                               </li>
-                                                        <li class="">
-                                  <a href="/preferences/encoding.html">
-                                      Character Encoding
+                                  <a href="/preferences/filetypes.html">
+                                      FileTypes
                                   </a>
                                </li>
                                                         <li class="">
                                   <a href="/preferences/analysis.html">
-                                      Language Analysis
+                                      Linting
                                   </a>
                                </li>
                                                         <li class="">
@@ -219,6 +214,11 @@
                          Codeanywhere Features
                      </p>
                      <ul class="nav nav-pills nav-stacked">
+                                                        <li class="">
+                                  <a href="/features/colorpicker.html">
+                                      Color Picker
+                                  </a>
+                               </li>
                                                         <li class="">
                                   <a href="/features/share.html">
                                       Share
@@ -247,6 +247,16 @@
                                                         <li class="">
                                   <a href="/features/minimap.html">
                                       Mini Map
+                                  </a>
+                               </li>
+                                                        <li class="">
+                                  <a href="/features/search.html">
+                                      Searching and Replacing in Files
+                                  </a>
+                               </li>
+                                                        <li class="">
+                                  <a href="/features/encoding.html">
+                                      Character Encoding
                                   </a>
                                </li>
                                                         <li class="">
@@ -334,88 +344,11 @@
           <div>
             <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
               <h1 id="general-preferences">General Preferences</h1>
-<p>You’ll see preferences in <a href="http://docs.codeanywhere.com/overview/codeanywhereui/topmenubar.html">Top Menu Bar</a>. Default preferences can’t be changed but you can overwrite them in User or Projects settings.
-We’ll now take an overview of the preferences you can manage and their default values of General preferences:</p>
-<ul>
-<li>in your workspace:
-<ul>
-<li>Codeanywhere visual theme - currently available &quot;monokai&quot;, &quot;white&quot;, &quot;dark&quot; -
-&quot;theme&quot;: &quot;monokai&quot;,</li>
-<li>color scheme - currently available: &quot;monokai&quot;, &quot;white&quot;, &quot;eclipse&quot;, &quot;ambiance&quot;, &quot;blackboard&quot;, &quot;pastel-on-dark&quot;, &quot;seti&quot; -
-&quot;color_scheme&quot;: &quot;monokai&quot;,</li>
-<li>use sound notifications (for example on file save) -
-&quot;sounds&quot;: true,</li>
-<li>whether to show info on how to use copy/paste in SSH terminal (for windows) -
-&quot;windows_copy_paste_info&quot;: true</li>
-</ul></li>
-<li>settings of your File Explorer
-<ul>
-<li>should file explorer be visible -
-&quot;visible&quot;: true,</li>
-<li>show checkboxes for selecting files in file explorer -
-&quot;checkboxes&quot;: false,</li>
-<li>open files and folders with a double click -
-&quot;dblclick&quot;: false,</li>
-<li>show hidden files and folders -
-&quot;show_hidden_files&quot;: false</li>
-</ul></li>
-<li>settings of your Editor    
-<ul>
-<li>auto-close brackets and quotes while typing - by default, it'll auto-close ()[]{}''&quot;&quot; -
-&quot;auto_close_brackets&quot;: true,</li>
-<li>auto-close html tags -
-&quot;auto_close_tags&quot;: true,</li>
-<li>show code completions while typing -
-&quot;autocomplete&quot;: true,</li>
-<li>whether to periodically save unsaved opened tabs -
-&quot;autosave&quot;: false,</li>
-<li>auto detect indentation on file open (spaces or tabs) -
-&quot;detect_indentation&quot;: true,</li>
-<li>open file with encoding -
-&quot;default_encoding&quot;: &quot;UTF-8&quot;,</li>
-<li>whether to expand emmet abbreviation when indenting (usually when tab key is pressed) -
-&quot;emmet_expand_abbreviation_on_indent&quot;: true,</li>
-<li>show fold icons in gutter -
-&quot;fold_gutter&quot;: true,</li>
-<li>editor font size (if set to false, theme default will be used) -
-&quot;font_size&quot;: false,</li>
-<li>the period of inactivity (in milliseconds) that will cause a new history event to be started when typing or deleting -
-&quot;history_event_delay&quot;: 250,</li>
-<li>highlights occurrences of the selected text -
-&quot;highlight_selection_matches&quot;: true,</li>
-<li>highlight active line in gutter -
-&quot;hover_active_line&quot;: true,</li>
-<li>default indentation (can be ignored if detect_indetation is enabled) -
-&quot;indent_with_tabs&quot;: false,</li>
-<li>show line numbers in gutter -
-&quot;line_numbers&quot;: true,</li>
-<li>show errors and warnings in gutter -
-&quot;lint&quot;: {
-&quot;value&quot;: true,
-&quot;mode&quot;: [&quot;JavaScript&quot;, &quot;JSON&quot;]
-},</li>
-<li>when enabled, causes matching brackets to be highlighted whenever the cursor is next to them -
-&quot;match_brackets&quot;: true,</li>
-<li>when enabled, will cause the tags around the cursor to be highlighted -
-&quot;match_tags&quot;: {
-&quot;value&quot;: true,
-&quot;mode&quot;: &quot;html&quot;
-},</li>
-<li>whether to show MiniMap in editor -
-&quot;minimap&quot;: true,</li>
-<li>open editor in read-only mode -
-&quot;read_only&quot;: false,</li>
-<li>editor scroll style - available options: &quot;overlay&quot; and &quot;native&quot; -
-&quot;scrollbar_style&quot;: &quot;overlay&quot;,</li>
-<li>the number of spaces a tab is considered equal to -
-&quot;tab_size&quot;: 2,</li>
-<li>the maximum number of undo levels that the editor stores -
-&quot;undo_dept&quot;: 1000,</li>
-<li>whether to scroll or wrap long lines -
-&quot;wrap_lines&quot;: false</li>
-</ul></li>
-</ul>
-<p>For example, in Preferences -&gt; Default -&gt; General, you'll see it is set to: </p>
+<p>General Preferences are devided in three groups: Workspace, File Explorer and Editor.</p>
+<p>Using GUI Preferences, you can set your general preferences and when you are done, just choose &quot;Save&quot; option.</p>
+<p><img src="images/gui_preferences.png" alt="goto" title="gui_preferences" /></p>
+<p>If you are defining preferences using JSON you must follow the Default General Preferences syntax which you can see at the bottom of this section.</p>
+<p>For example, if you wish to chacge a Theme, you'll see it is set to: </p>
 <pre><code>"workspace": { 
     "theme": "monokai" 
 } </code></pre>
@@ -424,6 +357,128 @@ We’ll now take an overview of the preferences you can manage and their default
     "theme": "white" 
 }</code></pre>
 <p>And by doing this, you'll override settings from Default.</p>
+<p>All Default General Preferences:</p>
+<pre><code>{
+
+  "workspace": {
+    // should preferences be defined in JSON format
+    "json_preferences": false,
+
+    // whether to use live pair programming on shared files
+    "pair_programming": false,
+
+    // codeanywhere visual theme
+    // currently available: "monokai", "monokai-retina", "dark", "white"
+    "theme": "monokai",
+
+    // editor syntax highlighting
+    // currently available: "monokai", "dark", "white", "eclipse", "ambiance", "blackboard", "pastel-on-dark", "seti"
+    "color_scheme": "monokai",
+
+    // use sound notifications (for example on file save)
+    "sounds": true,
+
+    // whether to show info on how to use copy/paste in SSH terminal (for windows)
+    "ssh_copy_paste_info": true,
+
+    // whether to open SSH Terminal tabs in bottom panel (if single or row-2 layout is used)
+    "open_ssh_in_bottom_panel": false
+  },
+
+  "fileExplorer": {
+    // should file explorer be visible
+    "visible": true,
+
+    // show checkboxes for selecting files in file explorer
+    "checkboxes": false,
+
+    // open files and folders with a double click
+    "dblclick": false,
+
+    // show hidden files and folders
+    "show_hidden_files": true
+  },
+
+  "editor": {
+    // auto-close brackets and quotes while typing. By default, it'll auto-close ()[]{}''""
+    "auto_close_brackets": true,
+
+    // auto-close html tags
+    "auto_close_tags": true,
+
+    // show code completions while typing 
+    "autocomplete": true,
+
+    // whether to periodically save unsaved opened tabs 
+    "autosave": false,
+
+    // whether to show colorpicker when invoked 
+    "colorpicker": true,
+
+    // auto detect indentation on file open (spaces or tabs)
+    "detect_indentation": true,
+
+    // open file with encoding
+    "default_encoding": "UTF-8",
+
+    // whether to expand emmet abbreviation when indenting (usually when tab key is pressed)
+    "emmet_expand_abbreviation_on_indent": true,
+
+    // show fold icons in gutter
+    "fold_gutter": true,
+
+    // editor font size
+    "font_size": 14,
+
+    // editor font family (if set to false, theme default will be used)
+    // available options: 'Anonymous Pro', 'Droid Sans Mono', 'Inconsolata', 'Raleway', 'PT Mono', 'Source Code Pro', 'Share Tech Mono', 'Ubuntu Mono'
+    "font_family": "Inconsolata",
+
+    // the period of inactivity (in milliseconds) that will cause a new history event to be started when typing or deleting
+    "history_event_delay": 250,
+
+    // highlights occurrences of the selected text
+    "highlight_selection_matches": true,
+
+    // highlight active line in gutter
+    "hover_active_line": true,
+
+    // default indentation (can be ignored if detect_indetation is enabled)
+    "indent_with_tabs": false,
+
+    // show line numbers in gutter
+    "line_numbers": true,
+
+    // show errors and warnings in gutter
+    "lint": true,
+
+    // when enabled, causes matching brackets to be highlighted whenever the cursor is next to them
+    "match_brackets": true,
+
+    // when enabled, will cause the tags around the cursor to be highlighted
+    "match_tags": true,
+
+    // whether to show MiniMap in editor
+    "minimap": true,
+
+    // open editor in read-only mode
+    "read_only": false,
+
+    // editor scroll style
+    // available options: "overlay" and "native"
+    "scrollbar_style": "overlay",
+
+    // the number of spaces a tab is considered equal to
+    "tab_size": 2,
+
+    // the maximum number of undo levels that the editor stores
+    "undo_dept": 1000,
+
+    // whether to scroll or wrap long lines
+    "wrap_lines": false
+  }
+
+}</code></pre>
             </section>
           </br>
             <footer>

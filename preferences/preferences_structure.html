@@ -179,7 +179,7 @@
                          Preferences
                      </p>
                      <ul class="nav nav-pills nav-stacked">
-                                                        <li class="">
+                                                        <li class="active">
                                   <a href="/preferences/preferences_structure.html">
                                       Preferences Structure
                                   </a>
@@ -204,7 +204,7 @@
                                       Linting
                                   </a>
                                </li>
-                                                        <li class="active">
+                                                        <li class="">
                                   <a href="/preferences/snippets.html">
                                       Snippets
                                   </a>
@@ -343,126 +343,23 @@
                         </div>
           <div>
             <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-              <h1 id="snippets">Snippets</h1>
-<p>Snippets are smart templates that will insert text for you and adapt it to their context. They allow you to generate commonly used code syntax from a shortcut as soon as possible. This way, you can quickly re-use any code! </p>
-<h3 id="creating-snippets">Creating Snippets</h3>
-<p>Using GUI Preferences, you can remove existing snippets or add a new one using option menu and when you are done, just choose &quot;Save&quot; option.</p>
-<p><img src="images/snippets.png" alt="goto" title="snippets" /></p>
-<p>You can define your snippets for specific languages in User or Project Preferences in a JSON format as well. </p>
-<p>Here is an example for &quot;For Loop&quot; snippet for JavaScript:</p>
-<pre><code>   "For Loop": {
-    "prefix": "for",
-    "body": [
-      "for (var ${1:index} = 0; ${1:index} &lt; ${2:array}.length; ${1:index}++) {",
-      "\tvar ${3:element} = ${2:array}[${1:index}];",
-      "\t$4",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "For Loop snippet"
-  },</code></pre>
-<p>In the example above:</p>
+              <h1 id="preferences-structure">Preferences Structure</h1>
+<p>You’ll see preferences in <a href="http://docs.codeanywhere.com/overview/codeanywhereui/thetopmenubar.html">Top Menu Bar</a>.
+Preferences can be defined in one of two Layers: User and Project Preferences. When retrieving a preference value, preferences defined in Project layer are taken first, then if not defined there, values from User Lazer are used and if nothing is defined there as well, Default value is used.</p>
+<p>Preferences can be defined using Graphical user interface or by editing JSON file.</p>
+<p>Bz default, GUI Preferences is used but if you prefer defining your preferences in JSON, you can turn on &quot;Open as JSON&quot; in Preferences section of Top Menu Bar.</p>
+<p>There is 5 Preferences categories:</p>
 <ul>
-<li><em>For Loop</em> is the snippet name</li>
-<li><em>prefix</em> defines a prefix used for listing a Snippet. In this example, just enter the Tab key after typing &quot;for&quot; and you'll see your Snippet content.</li>
-<li><em>body</em> is the Snippet content.</li>
-<li><em>scope</em> containes <em>mode</em> of your Snippet. In this case it is JavaScript mode.</li>
-<li><em>description</em> explains data in a Snippet.</li>
+<li><a href="general.html">General</a></li>
+<li><a href="commandsandkeybindings.html">Key Bindings</a></li>
+<li><a href="filetypes.html">FileTypes</a></li>
+<li><a href="analysis.html">Linting</a></li>
+<li><a href="snippets.html">Snippets</a></li>
 </ul>
-<p>You can use $id and ${id:label} for variables since variables with the same name are connected.
-Since the syntax is like this: ${id:label}, each acts as a default value for a tab stop. With the help of field markers, you can cycle through positions within the snippet by pressing the Tab key.</p>
-<p>Identical field markers mirror each other: when you edit the first one, the rest will be populated with the same value in real time.
-By expanding the field syntax a little bit, you can define default values for a field. Placeholders are useful when there’s a general case for your snippet but you still want to keep its customization convenient.</p>
-<p>In order to edit Snippet file go to Preferences -&gt; User/Project -&gt; Snippets</p>
-<p>For example, in order to change For Loop defined in Default Preferences, go to Preferences -&gt; User/Project -&gt; Snippets and type:</p>
-<pre><code>   "For Loop": {
-    "prefix": "for",
-    "body": [
-      "for (var ${2:index} = 0; ${2:index} &lt; ${1:array}.length; ${2:index}++) {",
-      "\tvar ${3:element} = ${1:array}[${2:index}];",
-      "\t$4",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "For Loop snippet"
-  },</code></pre>
-<p>This will change your For Loop for javascript to start defining array and then index.</p>
-<p>All Default Snippets Preferences:</p>
-<pre><code>{
-  "Anonymous function": {
-    "prefix": "fn",
-    "body": [
-      "function() {",
-      "\t$1",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "Anonymous function snippet"
-  },
-
-  "console.log": {
-    "prefix": "log",
-    "body": [
-      "console.log($1)$2"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "console.log snippet"
-  },
-
-  "For Loop": {
-    "prefix": "for",
-    "body": [
-      "for (var ${1:index} = 0; ${1:index} &lt; ${2:array}.length; ${1:index}++) {",
-      "\tvar ${3:element} = ${2:array}[${1:index}];",
-      "\t$4",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "For Loop snippet"
-  },
-
-  "if/else": {
-    "prefix": "ife",
-    "body": [
-      "if ($1) {",
-      "\t$2",
-      "} else {",
-      "\t$3",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "if/else condition snippet"
-  },
-
-  "While Loop": {
-    "prefix": "while",
-    "body": [
-      "while (${1:expression}) {",
-      "\t$2",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "While Loop snippet"
-  }
-}</code></pre>
             </section>
           </br>
             <footer>
-                         <a href="https://github.com/codeanywhere/documentation/blob/master/preferences/snippets.md">
+                         <a href="https://github.com/codeanywhere/documentation/blob/master/preferences/preferences_structure.md">
                 Improve this Documentation
              </a>
                

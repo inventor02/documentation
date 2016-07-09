@@ -194,7 +194,7 @@
                                       Key Bindings
                                   </a>
                                </li>
-                                                        <li class="">
+                                                        <li class="active">
                                   <a href="/preferences/filetypes.html">
                                       FileTypes
                                   </a>
@@ -204,7 +204,7 @@
                                       Linting
                                   </a>
                                </li>
-                                                        <li class="active">
+                                                        <li class="">
                                   <a href="/preferences/snippets.html">
                                       Snippets
                                   </a>
@@ -343,126 +343,415 @@
                         </div>
           <div>
             <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-              <h1 id="snippets">Snippets</h1>
-<p>Snippets are smart templates that will insert text for you and adapt it to their context. They allow you to generate commonly used code syntax from a shortcut as soon as possible. This way, you can quickly re-use any code! </p>
-<h3 id="creating-snippets">Creating Snippets</h3>
-<p>Using GUI Preferences, you can remove existing snippets or add a new one using option menu and when you are done, just choose &quot;Save&quot; option.</p>
-<p><img src="images/snippets.png" alt="goto" title="snippets" /></p>
-<p>You can define your snippets for specific languages in User or Project Preferences in a JSON format as well. </p>
-<p>Here is an example for &quot;For Loop&quot; snippet for JavaScript:</p>
-<pre><code>   "For Loop": {
-    "prefix": "for",
-    "body": [
-      "for (var ${1:index} = 0; ${1:index} &lt; ${2:array}.length; ${1:index}++) {",
-      "\tvar ${3:element} = ${2:array}[${1:index}];",
-      "\t$4",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "For Loop snippet"
-  },</code></pre>
-<p>In the example above:</p>
-<ul>
-<li><em>For Loop</em> is the snippet name</li>
-<li><em>prefix</em> defines a prefix used for listing a Snippet. In this example, just enter the Tab key after typing &quot;for&quot; and you'll see your Snippet content.</li>
-<li><em>body</em> is the Snippet content.</li>
-<li><em>scope</em> containes <em>mode</em> of your Snippet. In this case it is JavaScript mode.</li>
-<li><em>description</em> explains data in a Snippet.</li>
-</ul>
-<p>You can use $id and ${id:label} for variables since variables with the same name are connected.
-Since the syntax is like this: ${id:label}, each acts as a default value for a tab stop. With the help of field markers, you can cycle through positions within the snippet by pressing the Tab key.</p>
-<p>Identical field markers mirror each other: when you edit the first one, the rest will be populated with the same value in real time.
-By expanding the field syntax a little bit, you can define default values for a field. Placeholders are useful when there’s a general case for your snippet but you still want to keep its customization convenient.</p>
-<p>In order to edit Snippet file go to Preferences -&gt; User/Project -&gt; Snippets</p>
-<p>For example, in order to change For Loop defined in Default Preferences, go to Preferences -&gt; User/Project -&gt; Snippets and type:</p>
-<pre><code>   "For Loop": {
-    "prefix": "for",
-    "body": [
-      "for (var ${2:index} = 0; ${2:index} &lt; ${1:array}.length; ${2:index}++) {",
-      "\tvar ${3:element} = ${1:array}[${2:index}];",
-      "\t$4",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "For Loop snippet"
-  },</code></pre>
-<p>This will change your For Loop for javascript to start defining array and then index.</p>
-<p>All Default Snippets Preferences:</p>
+              <h1 id="filetypes">FileTypes</h1>
+<p>For syntax highlighting and language support, Codeanywhere uses <a href="https://codemirror.net/">Codemirror</a>. CodeMirror supports over two dozen different modules, and any changes made to CodeMirror are reflected back into Codeanywhere.
+By default, files are highlighted based on their file extension. You can still add new extensions in User or Project preferences and override the ones from General preferences </p>
+<p>Using GUI Preferences, you can change existing filetype exentions or add a new one using option menu and when you are done, just choose &quot;Save&quot; option.</p>
+<p><img src="images/filetypes.png" alt="goto" title="filetypes" /></p>
+<p>If you are defining preferences using JSON you must follow the Default FileTypes Preferences syntax which you can see at the bottom of this section.</p>
+<p>For example, if you wish to add new extension for HTML mode, you'll see it is set to: </p>
+<pre><code>"HTML": { 
+  "extension": ["html", "htm"]
+}</code></pre>
+<p>And now you can add CTP extension inside Preferences -&gt; User/Project -&gt; File Types, by adding code:</p>
+<pre><code>"HTML": { 
+  "extension": ["html", "htm", "CTP"]
+}</code></pre>
+<p>And by doing this, you'll override settings from Default.</p>
+<p>All Default FileTypes Preferences:</p>
 <pre><code>{
-  "Anonymous function": {
-    "prefix": "fn",
-    "body": [
-      "function() {",
-      "\t$1",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "Anonymous function snippet"
+  "APL": {
+    "extension": ["dyalog", "apl"]
   },
-
-  "console.log": {
-    "prefix": "log",
-    "body": [
-      "console.log($1)$2"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "console.log snippet"
+  "PGP": {
+    "extension": ["pgp"]
   },
-
-  "For Loop": {
-    "prefix": "for",
-    "body": [
-      "for (var ${1:index} = 0; ${1:index} &lt; ${2:array}.length; ${1:index}++) {",
-      "\tvar ${3:element} = ${2:array}[${1:index}];",
-      "\t$4",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "For Loop snippet"
+  "ASN.1": {
+    "extension": ["asn", "asn1"]
   },
-
-  "if/else": {
-    "prefix": "ife",
-    "body": [
-      "if ($1) {",
-      "\t$2",
-      "} else {",
-      "\t$3",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "if/else condition snippet"
+  "Asterisk": {
+    "extension": []
   },
-
-  "While Loop": {
-    "prefix": "while",
-    "body": [
-      "while (${1:expression}) {",
-      "\t$2",
-      "}"
-    ],
-    "scope": {
-      "mode": ["JavaScript"]
-    },
-    "description": "While Loop snippet"
+  "Brainfuck": {
+    "extension": ["b", "bf"]
+  },
+  "C": {
+    "extension": ["c", "h"]
+  },
+  "C++": {
+    "extension": ["cpp", "c++", "cc", "cxx", "hpp", "h++", "hh", "hxx"]
+  },
+  "Cobol": {
+    "extension": ["cob", "cpy"]
+  },
+  "C#": {
+    "extension": ["cs"]
+  },
+  "Clojure": {
+    "extension": ["clj"]
+  },
+  "CMake": {
+    "extension": ["cmake", "cmake.in"]
+  },
+  "CoffeeScript": {
+    "extension": ["coffee"]
+  },
+  "Common Lisp": {
+    "extension": ["cl", "lisp", "el"]
+  },
+  "Cypher": {
+    "extension": ["cyp", "cypher"]
+  },
+  "Cython": {
+    "extension": ["pyx", "pxd", "pxi"]
+  },
+  "CSS": {
+    "extension": ["css"]
+  },
+  "CQL": {
+    "extension": ["cql"]
+  },
+  "D": {
+    "extension": ["d"]
+  },
+  "Dart": {
+    "extension": ["dart"]
+  },
+  "diff": {
+    "extension": ["diff", "patch"]
+  },
+  "Django": {
+    "extension": []
+  },
+  "Dockerfile": {
+    "extension": []
+  },
+  "DTD": {
+    "extension": ["dtd"]
+  },
+  "Dylan": {
+    "extension": ["dylan", "dyl", "intr"]
+  },
+  "EBNF": {
+    "extension": []
+  },
+  "ECL": {
+    "extension": ["ecl"]
+  },
+  "Eiffel": {
+    "extension": ["e"]
+  },
+  "Elm": {
+    "extension": ["elm"]
+  },
+  "Embedded Javascript": {
+    "extension": ["ejs"]
+  },
+  "Embedded Ruby": {
+    "extension": ["erb"]
+  },
+  "Erlang": {
+    "extension": ["erl"]
+  },
+  "Factor": {
+    "extension": ["factor"]
+  },
+  "Forth": {
+    "extension": ["forth", "fth", "4th"]
+  },
+  "Fortran": {
+    "extension": ["f", "for", "f77", "f90"]
+  },
+  "F#": {
+    "extension": ["fs"]
+  },
+  "Gas": {
+    "extension": ["s"]
+  },
+  "Gherkin": {
+    "extension": ["feature"]
+  },
+  "GitHub Flavored Markdown": {
+    "extension": []
+  },
+  "Go": {
+    "extension": ["go"]
+  },
+  "Groovy": {
+    "extension": ["groovy"]
+  },
+  "HAML": {
+    "extension": ["haml"]
+  },
+  "Haskell": {
+    "extension": ["hs"]
+  },
+  "Haxe": {
+    "extension": ["hx"]
+  },
+  "HXML": {
+    "extension": ["hxml"]
+  },
+  "ASP.NET": {
+    "extension": ["aspx"]
+  },
+  "HTML": {
+    "extension": ["html", "htm"]
+  },
+  "HTTP": {
+    "extension": []
+  },
+  "IDL": {
+    "extension": ["pro"]
+  },
+  "Jade": {
+    "extension": ["jade"]
+  },
+  "Java": {
+    "extension": ["java"]
+  },
+  "Java Server Pages": {
+    "extension": ["jsp"]
+  },
+  "JavaScript": {
+    "extension": ["js"]
+  },
+  "JSON": {
+    "extension": ["json", "map"]
+  },
+  "JSON-LD": {
+    "extension": ["jsonld"]
+  },
+  "Jinja2": {
+    "extension": []
+  },
+  "Julia": {
+    "extension": ["jl"]
+  },
+  "Kotlin": {
+    "extension": ["kt"]
+  },
+  "LESS": {
+    "extension": ["less"]
+  },
+  "LiveScript": {
+    "extension": ["ls"]
+  },
+  "Lua": {
+    "extension": ["lua"]
+  },
+  "Markdown": {
+    "extension": ["markdown", "md", "mkd"]
+  },
+  "mIRC": {
+    "extension": []
+  },
+  "MariaDB SQL": {
+    "extension": []
+  },
+  "Mathematica": {
+    "extension": ["m", "nb"]
+  },
+  "Modelica": {
+    "extension": ["mo"]
+  },
+  "MUMPS": {
+    "extension": []
+  },
+  "MS SQL": {
+    "extension": []
+  },
+  "MySQL": {
+    "extension": []
+  },
+  "Nginx": {
+    "extension": []
+  },
+  "NTriples": {
+    "extension": ["nt"]
+  },
+  "Objective C": {
+    "extension": ["m", "mm"]
+  },
+  "OCaml": {
+    "extension": ["ml", "mli", "mll", "mly"]
+  },
+  "Octave": {
+    "extension": ["m"]
+  },
+  "Pascal": {
+    "extension": ["p", "pas"]
+  },
+  "PEG.js": {
+    "extension": ["jsonld"]
+  },
+  "Perl": {
+    "extension": ["pl", "pm"]
+  },
+  "PHP": {
+    "extension": ["php", "php3", "php4", "php5", "phtml", "ctp"]
+  },
+  "Pig": {
+    "extension": ["pig"]
+  },
+  "Plain Text": {
+    "extension": ["txt", "text", "conf", "def", "list", "log"]
+  },
+  "PLSQL": {
+    "extension": ["pls"]
+  },
+  "Properties files": {
+    "extension": ["properties", "ini", "in"]
+  },
+  "Python": {
+    "extension": ["py", "pyw"]
+  },
+  "Puppet": {
+    "extension": ["pp"]
+  },
+  "Q": {
+    "extension": ["q"]
+  },
+  "R": {
+    "extension": ["r"]
+  },
+  "reStructuredText": {
+    "extension": ["rst"]
+  },
+  "RPM Changes": {
+    "extension": []
+  },
+  "RPM Spec": {
+    "extension": ["spec"]
+  },
+  "Ruby": {
+    "extension": ["rb"]
+  },
+  "Rust": {
+    "extension": ["rs"]
+  },
+  "Sass": {
+    "extension": ["sass"]
+  },
+  "Scala": {
+    "extension": ["scala"]
+  },
+  "Scheme": {
+    "extension": ["scm", "ss"]
+  },
+  "SCSS": {
+    "extension": ["scss"]
+  },
+  "Shell": {
+    "extension": ["sh", "ksh", "bash"]
+  },
+  "Sieve": {
+    "extension": ["siv", "sieve"]
+  },
+  "Slim": {
+    "extension": ["slim"]
+  },
+  "Smalltalk": {
+    "extension": ["st"]
+  },
+  "Smarty": {
+    "extension": ["tpl"]
+  },
+  "Solr": {
+    "extension": []
+  },
+  "Soy": {
+    "extension": ["soy"]
+  },
+  "SPARQL": {
+    "extension": ["rq", "sparql"]
+  },
+  "Spreadsheet": {
+    "extension": []
+  },
+  "SQL": {
+    "extension": ["sql"]
+  },
+  "Swift": {
+    "extension": ["swift"]
+  },
+  "MariaDB": {
+    "extension": []
+  },
+  "sTeX": {
+    "extension": []
+  },
+  "LaTeX": {
+    "extension": ["text", "ltx"]
+  },
+  "SystemVerilog": {
+    "extension": ["v"]
+  },
+  "Tcl": {
+    "extension": ["tcl"]
+  },
+  "Textile": {
+    "extension": ["textile"]
+  },
+  "TiddlyWiki ": {
+    "extension": []
+  },
+  "Tiki wiki": {
+    "extension": []
+  },
+  "TOML": {
+    "extension": ["toml"]
+  },
+  "Tornado": {
+    "extension": []
+  },
+  "troff": {
+    "extension": []
+  },
+  "TTCN": {
+    "extension": ["ttcn", "ttcn3", "ttcnpp"]
+  },
+  "TTCN_CFG": {
+    "extension": ["cfg"]
+  },
+  "Turtle": {
+    "extension": ["ttl"]
+  },
+  "TypeScript": {
+    "extension": ["ts"]
+  },
+  "Twig": {
+    "extension": []
+  },
+  "VB.NET": {
+    "extension": ["vb"]
+  },
+  "VBScript": {
+    "extension": ["vbs"]
+  },
+  "Velocity": {
+    "extension": ["vtl"]
+  },
+  "Verilog": {
+    "extension": ["v"]
+  },
+  "XML": {
+    "extension": ["xml", "xsl", "xsd"]
+  },
+  "XQuery": {
+    "extension": ["xy", "xquery"]
+  },
+  "YAML": {
+    "extension": ["yaml", "yml"]
+  },
+  "Z80": {
+    "extension": ["z80"]
   }
 }</code></pre>
             </section>
           </br>
             <footer>
-                         <a href="https://github.com/codeanywhere/documentation/blob/master/preferences/snippets.md">
+                         <a href="https://github.com/codeanywhere/documentation/blob/master/preferences/filetypes.md">
                 Improve this Documentation
              </a>
                

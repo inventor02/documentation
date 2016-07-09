@@ -176,37 +176,32 @@
                                </li>
                                               </ul>
                                         <p class="menu-section">
-                         Codeanywhere Settings
+                         Preferences
                      </p>
                      <ul class="nav nav-pills nav-stacked">
                                                         <li class="">
-                                  <a href="/preferences/general.html">
-                                      General Preferences
+                                  <a href="/preferences/preferences_structure.html">
+                                      Preferences Structure
                                   </a>
                                </li>
                                                         <li class="">
-                                  <a href="/preferences/supportedlanguagesandthemes.html">
-                                      Supported Languages and Themes
+                                  <a href="/preferences/general.html">
+                                      General
                                   </a>
                                </li>
                                                         <li class="">
                                   <a href="/preferences/commandsandkeybindings.html">
-                                      Commands and Key Bindings
+                                      Key Bindings
                                   </a>
                                </li>
                                                         <li class="">
-                                  <a href="/preferences/search.html">
-                                      Searching and Replacing in Files
-                                  </a>
-                               </li>
-                                                        <li class="">
-                                  <a href="/preferences/encoding.html">
-                                      Character Encoding
+                                  <a href="/preferences/filetypes.html">
+                                      FileTypes
                                   </a>
                                </li>
                                                         <li class="">
                                   <a href="/preferences/analysis.html">
-                                      Language Analysis
+                                      Linting
                                   </a>
                                </li>
                                                         <li class="">
@@ -219,6 +214,11 @@
                          Codeanywhere Features
                      </p>
                      <ul class="nav nav-pills nav-stacked">
+                                                        <li class="">
+                                  <a href="/features/colorpicker.html">
+                                      Color Picker
+                                  </a>
+                               </li>
                                                         <li class="">
                                   <a href="/features/share.html">
                                       Share
@@ -247,6 +247,16 @@
                                                         <li class="">
                                   <a href="/features/minimap.html">
                                       Mini Map
+                                  </a>
+                               </li>
+                                                        <li class="">
+                                  <a href="/features/search.html">
+                                      Searching and Replacing in Files
+                                  </a>
+                               </li>
+                                                        <li class="">
+                                  <a href="/features/encoding.html">
+                                      Character Encoding
                                   </a>
                                </li>
                                                         <li class="">
@@ -336,14 +346,18 @@
               <h1 id="setting-custom-domain">Setting Custom Domain</h1>
 <p>Once you've created a container, you will probably want to preview it in your own link! Now, you can set your custom domain using our <a href="https://codeanywhere.com/dashboard#">Dashboard</a>!</p>
 <p><img src="images/customdomain1.png" alt="customdomain1" title="customdomain1" /></p>
+<h2 id="cname-records">CNAME Records</h2>
+<p>Before you start configuring your domain in Codeanywhere, there is one step you should do first and that is to go to your domain register (GoDaddy and similar) and create a CNAME record. </p>
+<p>The CNAME record you create must point to our proxy server: proxy.codeanyapp.com</p>
+<p>For more information on CNAMEs and how they work, please visit the Google Support Guide for CNAME records.</p>
 <p>In your dashboard, select &quot;Add New Domain Name&quot;.</p>
-<p>Add your Custom Domain:</p>
+<h2 id="add-your-custom-domain">Add your Custom Domain:</h2>
+<p>Add External Port to 80, 443 or port in range of 1024 and 9999. Set the Internal Port to the port your application server is listening to. For example, if you set your Internal Port to 8000 and External Port to 80, you can access your custom domain without appending :8000 at the URL.</p>
 <p><img src="images/customdomain1-1.png" alt="customdomain1-1" title="customdomain1-1" /></p>
-<p>Add Internal port to 80. In case you have an app running on a specific port, you can set that as well. For example, if you set your Internal port to 8000, you can access your custom domain without appending :8000 at the URL.</p>
-<p>If you set the External port to 443, Codeanywhere will automatically set up a free SSL certificate provided by Let's Encrypt!</p>
+<p>If you set the External port to 443, Codeanywhere will automatically set up a free SSL certificate provided by Let's Encrypt! It is important that you have already configured your CNAME record to point to Codeanywhere proxy server so the certificate can be issued.</p>
 <p><img src="images/customdomain2.png" alt="customdomain2" title="customdomain2" /></p>
 <p>Click on Create and that's it! Now you can access your Container from your domain!
-Custom domains do not prevent container to be turned off in case it does not have AlwaysOn feature enabled. This feature is available on Freelancer plan or higher.</p>
+Custom domains do not prevent container to be turned off in case it does not have AlwaysOn feature enabled.</p>
             </section>
           </br>
             <footer>
