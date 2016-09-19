@@ -274,6 +274,11 @@
                                       Two Factor Authentication
                                   </a>
                                </li>
+                                                        <li class="">
+                                  <a href="/features/bookmarks.html">
+                                      Bookmarks
+                                  </a>
+                               </li>
                                               </ul>
                                         <p class="menu-section">
                          Advanced Topics
@@ -373,6 +378,7 @@ After your repositroy is imported, you can edit and preview your code. Then, you
 <p>git add -A // To track all files</p>
 <p>git commit -am &quot;message&quot; // To commit changes</p>
 <p>git push origin master // Push your local changes to bitbucket</p>
+<p>For more information see <a href="http://docs.codeanywhere.com/connections/bitbucket.html#working-with-repositories">working with repositories</a></p>
             </section>
           </br>
             <footer>
@@ -416,7 +422,11 @@ After your repositroy is imported, you can edit and preview your code. Then, you
          ga('send', 'pageview');
 
         </script>
-        
-
+        <!-- Livereload -->
+        <script>
+            document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+                    ':35729/livereload.js?snipver=1"></' + 'script>')
+        </script>
+        <!-- End Livereload -->
     </body>
 </html>
