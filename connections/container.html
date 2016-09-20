@@ -414,13 +414,13 @@ With containers, you can view your code with your preview link. You can check yo
 <li>id_rsa - private key container of your container, </li>
 <li>id_rsa.pub - public key of your container.</li>
 </ul>
-<h3 id="connect-your-container-via-sftp">Connect your Container via SFTP</h3>
+<h3 id="connect-your-container-via-ssh">Connect your Container via SSH</h3>
+<p><img src="images/container-hostname.png" alt="containerhostname" title="container-hostname" /></p>
 <p>These are the credentials you'll need: </p>
 <ul>
-<li>Hostname: preview link of your container - looks something like preview.xxxx.box.codeanywhere.com and you can check it in Container's Info with a right click on your Container </li>
+<li>Hostname and port: check it in Container's Info with a right click on your Container, select Info, locate SSH access, and that's the hostname and port you have to use.</li>
 <li>User name: cabox </li>
-<li>As for the password, you can't connect this way. You'll need private key of your Container and you can get it by going to /home/cabox/.ssh/id_rsa and that's your private key which you can use for connecting to your Container. </li>
-<li>Also, you'll need to check your Port - right click on your Container, select Info, locate SSH Terminal listening on port, and that's the port you have to use for connecting to SFTP.</li>
+<li>As for the password, you can't connect this way. You'll need private key of your Container and you can get it by going to /home/cabox/.ssh/id_rsa and that's your private key which you can use for connecting to your Container.</li>
 </ul>
 <p>Containers are available to all users, just login and try it out!</p>
             </section>
