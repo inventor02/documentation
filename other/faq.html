@@ -406,7 +406,7 @@ Behind the scenes it looks something like this: </p>
 <ol>
 <li>Start PuTTY by double-clicking its executable file; </li>
 <li>PuTTY's initial window is the Session Category (navigate PuTTY's various categories, along the left-hand side of the window); </li>
-<li>In the Host Name field, enter the Container’s DNS (preview.xxxxx.box.codeanywhere.com) </li>
+<li>In the Host Name field, enter the Container’s Host Name (hostXX.codeanyhost.com) </li>
 <li>Enter the port number in the Port field (see Container info) </li>
 <li>Select SSH under Protocol; </li>
 <li>Along the left-hand side of the window, select the Data sub-category, under Connection; </li>
@@ -429,13 +429,13 @@ Behind the scenes it looks something like this: </p>
 <li>Locate SSH port number in Container's Info</li>
 </ol>
 <p>Now in order to connect to your box, you have to use the following command to create a tunnel from your local machine to your Container:</p>
-<pre><code class="language-sh">ssh -P port cabox@preview.xxx.box.codeanywhere.com -i id_rsa.pub</code></pre>
+<pre><code class="language-sh">ssh -P port cabox@hostXX.codeanyhost.com -i id_rsa.pub</code></pre>
 <h3 id="how-to-connect-local-mysql-to-a-container">How to connect local MySQL to a Container?</h3>
 <p>After connecting to your local machine via Putty or Terminal, connect to your remote MySQL using: localhost:3306</p>
 <h3 id="how-can-i-connect-to-a-container-via-ftp">How can I connect to a Container via FTP?</h3>
 <p>You can't connect via FTP but you can connect as SFTP. These are the credentials you'll need: </p>
 <ul>
-<li>Hostname: preview link of your container - looks something like preview.xxxx.box.codeanywhere.com and you can check it in Container's Info with a right click on your Container </li>
+<li>Hostname: hostname of your container - looks something like hostXX.codeanyhost.com and you can check it in Container's Info with a right click on your Container </li>
 <li>User name: cabox </li>
 <li>As for the password, you can't connect this way. You'll need private key of your Container and you can get it by going to /home/cabox/.ssh/id_rsa and that's your private key which you can use for connecting to your Container. </li>
 <li>Also, you'll need to check your Port - right click on your Container, select Info, locate SSH Terminal listening on port, and that's the port you have to use for connecting to SFTP.</li>
@@ -454,7 +454,7 @@ Behind the scenes it looks something like this: </p>
 <p>Some of our stacks will default the IP to the localhost: 127.0.0.1. You have to change the default IP so your Container could run externally. Please change IP address on your container from 127.0.0.1 to 0.0.0.0 so that you could be able to preview your Ruby box. You can do that inside Config - under commands - of your container (right click on your container and select Config). </p>
 <p>For example, on Ruby stack, you just have to use the following command in order to run your Rails container: &quot;rails s --binding=0.0.0.0&quot;
 This will override localhost (127.0.0.1) where your app can't work.
-And now, you'll be able to view your Ruby app on: preview.xxxxxx.box.codeanywhere.com:3000.</p>
+And now, you'll be able to view your Ruby app on: containername-username.codeanyapp.com:3000.</p>
 <h3 id="in-a-wordpress-stack-after-uploading-plug-ins-i-receive-an-error-and-permission-is-denied-why">In a Wordpress stack, after uploading plug-ins, I receive an error and permission is denied. Why?</h3>
 <p>You can prevent these issues by running commands in SSH: </p>
 <ul>
